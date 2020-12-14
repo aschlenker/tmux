@@ -18,7 +18,8 @@ get_percent()
 {
 	case $(uname -s) in
 		Linux)
-			percent=$(LC_NUMERIC=en_US.UTF-8 top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
+			cpuusage=$(top -b -n1 | grep "CPU(s)" | awk '{print $2 + $4}' | awk -F. '{print $1}')
+			percent="$cpuusage%"
 			echo $percent
 		;;
 		
