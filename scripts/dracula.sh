@@ -166,13 +166,13 @@ main()
 
       if $show_time; then
         if $show_day_month && $show_military ; then # military time and dd/mm
-          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a %d/%m %R ${timezone} "
+          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a. %Y-%d-%m %R ${timezone}"
         elif $show_military; then # only military time
-          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a %m/%d %R ${timezone} "
+          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a. %Y-%m-%d %R ${timezone}"
         elif $show_day_month; then # only dd/mm
-          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a %d/%m %I:%M %p ${timezone} "
+          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a. %Y-%d-%m %I:%M %p ${timezone}"
         else
-          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a %m/%d %I:%M %p ${timezone} "
+          tmux set-option -ga status-right "#[fg=${dark_purple},bg=${powerbg},nobold,nounderscore,noitalics] ${right_sep}#[fg=${white},bg=${dark_purple}] %a. %Y-%m-%d %I:%M %p ${timezone}"
         fi
       fi
 
@@ -209,13 +209,13 @@ main()
 
       if $show_time; then
         if $show_day_month && $show_military ; then # military time and dd/mm
-          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a %d/%m %R ${timezone} "
+          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a. %Y-%d-%m %R ${timezone}"
         elif $show_military; then # only military time
-          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a %m/%d %R ${timezone} "
+          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a. %Y-%m-%d %R ${timezone}"
         elif $show_day_month; then # only dd/mm
-          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a %d/%m %I:%M %p ${timezone} "
+          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a. %Y-%d-%m %I:%M %p ${timezone}"
         else
-          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a %m/%d %I:%M %p ${timezone} "
+          tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a. %Y-%m-%d %I:%M %p ${timezone}"
         fi
       fi
 
